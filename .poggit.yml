@@ -5,4 +5,5 @@ branches:
 projects:
   No4dSkins:
     path: ""
+    icon: icon.png
 ...
