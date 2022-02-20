@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener {
 		}
 	}
 
-	public function onSKinChange(PlayerChangeSkinEvent $event){
+	public function onSkinChange(PlayerChangeSkinEvent $event){
 		$player = $event->getPlayer();
 		$newSkin = $event->getNewSkin();
 		if($newSkin->getGeometryName() === "geometry.humanoid.custom"){
