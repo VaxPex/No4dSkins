@@ -36,18 +36,18 @@ class Main extends PluginBase implements Listener
 
 	private function checkAndSetSkin(Player $player, Skin $skin) {
 		if ($skin->getGeometryName() === "geometry.humanoid.custom") {
-			$player->setSkin(new Skin($player->getSkin()->getSkinId(),
-				$player->getSkin()->getSkinData(),
-				$player->getSkin()->getCapeData(),
-				$player->getSkin()->getGeometryName(),
+			$player->setSkin(new Skin($skin->getSkinId(),
+				$skin->getSkinData(),
+				$skin->getCapeData(),
+				$skin->getGeometryName(),
 				file_get_contents($this->getDataFolder() . "steve.json"))
 			);
 			$player->sendSkin();
 		} else if ($skin->getGeometryName() === "geometry.humanoid.customSlim") {
-			$player->setSkin(new Skin($player->getSkin()->getSkinId(),
-				$player->getSkin()->getSkinData(),
-				$player->getSkin()->getCapeData(),
-				$player->getSkin()->getGeometryName(),
+			$player->setSkin(new Skin($skin->getSkinId(),
+				$skin->getSkinData(),
+				$skin->getCapeData(),
+				$skin->getGeometryName(),
 				file_get_contents($this->getDataFolder() . "alex.json"))
 			);
 			$player->sendSkin();
